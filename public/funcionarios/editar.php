@@ -43,12 +43,13 @@ else {
                       <input type="text" placeholder="Telefone" 
                           value="<?php echo $funcionario->getTelefone(); ?>"
                           class="form-control" name="telefone" required>
-                      <input type="text" placeholder="Endereco" 
-                          value="<?php echo $funcionario->getEndereco(); ?>"
-                          class="form-control" name="endereco" required>
                       <input type="text" placeholder="Email" 
                           value="<?php echo $funcionario->getEmail(); ?>"
                           class="form-control" name="email" required>
+                      <input type="text" placeholder="Endereco" 
+                          value="<?php echo $funcionario->getEndereco(); ?>"
+                          class="form-control" name="endereco" required>
+                      
                       <div class="input-group-append">
                           <button type="submit" class="btn btn-primary">
                               Salvar
