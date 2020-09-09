@@ -32,7 +32,7 @@ class Funcionario{
         return $this->nome;
     }
 
-    function setCpf(text $cpf){
+    function setCpf(string $cpf){
         $this->cpf = $cpf;
     }
     function getCpf(){
