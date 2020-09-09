@@ -14,7 +14,7 @@ if (! $conn->connect()) {
 }
 
 $daoFuncionario = new DaoFuncionario($conn);
-$funcionario = $daoFuncionario->porId( $_POST['id'] );
+$funcionario = $daoFuncionario->porId( $_GET['id'] );
 
 if (! $funcionario )
     header('Location: ./index.php');
