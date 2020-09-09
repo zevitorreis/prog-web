@@ -85,7 +85,7 @@ class DaoFuncionario{
     public function todos(): array {
         $sql = "SELECT id, nome, cpf, telefone, endereco, email from funcionarios";
         $stmt = $this->connection->prepare($sql);
-        $marcas = [];
+        $funcionarios = [];
         if ($stmt) {
           if ($stmt->execute()) {
             $id = 0; $nome = ''; $cpf = 0; $telefone = ''; $endereco = ''; $email = '';
