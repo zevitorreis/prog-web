@@ -12,7 +12,7 @@ if (! $conn->connect()) {
 }
 
 $daoFuncionario = new DaoFuncionario($conn);
-$daoFuncionario->inserir( new Funcionario($_POST['nome'],$_POST['cpf'],$_POST['telefone'],$_POST['endereco'],$_POST['email']));
+$daoFuncionario->inserir( new Funcionario($_POST['nome'],$_POST['cpf'],$_POST['telefone'],$_POST['email'], $_POST['endereco']));
     
 header('Location: ./index.php');
 
