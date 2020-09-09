@@ -40,7 +40,7 @@ class DaoFuncionario{
         $telefone = $funcionario->getTelefone();
         $email = $funcionario->getEmail();
         $endereco = $funcionario->getEndereco();
-        $stmt->bind_param('sisss', $nome,$cpf,$telefone,$endereco,$email);
+        $stmt->bind_param('sssss', $nome,$cpf,$telefone,$email,$endereco);
         if ($stmt->execute()) {
             $id = $this->connection->getLastID();
             $funcionario->setId($id);
@@ -75,7 +75,7 @@ class DaoFuncionario{
             $email = $funcionario->getEmail();
             $endereco = $funcionario->getEndereco();       
             $id   = $funcionario->getId();
-            $stmt->bind_param('sisssi', $nome,$cpf,$telefone,$endereco,$email,$id);
+            $stmt->bind_param('sssssi', $nome,$cpf,$telefone,$email,$endereco,$id);
             $ret = $stmt->execute();
             $stmt->close();
         }
