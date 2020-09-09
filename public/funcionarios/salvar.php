@@ -1,7 +1,5 @@
 <?php
 
-require_once(__DIR__ . '/../../templates/template-html.php');
-
 require_once(__DIR__ . '/../../db/Db.php');
 require_once(__DIR__ . '/../../model/Funcionario.php');
 require_once(__DIR__ . '/../../dao/DaoFuncionario.php');
@@ -14,7 +12,7 @@ if (! $conn->connect()) {
 }
 
 $daoFuncionario = new DaoFuncionario($conn);
-$daoFuncionario->inserir( new Funcionario($_POST['nome','cpf','telefone','endereco','email']));
+$daoFuncionario->inserir( new Funcionario($_POST['nome'],$_POST['cpf'],$_POST['telefone'],$_POST['endereco'],$_POST['email']]));
     
 header('Location: ./index.php');
 
