@@ -35,6 +35,9 @@ function html($content, $root_relative_path='../') {
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $root_relative_path . 'produtos'; ?>">Produtos </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $root_relative_path . 'funcionarios'; ?>">Funcionarios </a>
+                </li>
             </ul>
             <span class="navbar-text">
             </span>
