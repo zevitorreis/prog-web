@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS `produto_departamento`;
 DROP TABLE IF EXISTS `produtos`;
 DROP TABLE IF EXISTS `departamentos`;
 DROP TABLE IF EXISTS `marcas`;
-DROP TABLE IF EXISTS `funcionarios`
+DROP TABLE IF EXISTS `funcionarios`;
 CREATE TABLE `departamentos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
