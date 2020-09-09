@@ -38,4 +38,5 @@ CREATE TABLE `funcionarios`(
   `telefone` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `endereco` varchar(45) NOT NULL,
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
