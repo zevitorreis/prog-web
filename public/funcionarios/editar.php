@@ -37,7 +37,7 @@ else {
                       <input type="text" placeholder="Nome do Funcionario" 
                           value="<?php echo $funcionario->getNome(); ?>"
                           class="form-control" name="nome" required>
-                      <input type="number" placeholder="CPF" 
+                      <input type="text" placeholder="CPF" 
                           value="<?php echo $funcionario->getCpf(); ?>"
                           class="form-control" name="cpf" required>
                       <input type="text" placeholder="Telefone" 

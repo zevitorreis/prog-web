@@ -34,7 +34,7 @@ CREATE TABLE `produto_departamento` (
 CREATE TABLE `funcionarios`(
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
-  `cpf` int NOT NULL,
+  `cpf` varchar(45) NOT NULL,
   `telefone` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `endereco` varchar(45) NOT NULL,

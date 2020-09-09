@@ -16,7 +16,7 @@ ob_start();
                   <div class="input-group">
                       <input type="text" placeholder="Nome do Funcionario" 
                           class="form-control" name="nome" required>
-                      <input type="number" placeholder="CPF" 
+                      <input type="text" placeholder="CPF" 
                           class="form-control" name="cpf" required>
                       <input type="text" placeholder="Telefone" 
                           class="form-control" name="telefone" required>

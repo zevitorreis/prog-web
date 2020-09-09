@@ -9,7 +9,7 @@ class Funcionario{
     private $email;
     private $endereco;
     
-    function __construct(string $nome='', int $cpf=0, string $telefone='', string $email='', string $endereco='', int $id=-1 ){
+    function __construct(string $nome='', string $cpf='', string $telefone='', string $email='', string $endereco='', int $id=-1 ){
         $this->id = $id;
         $this->nome = $nome;
         $this->telefone = $telefone;
@@ -32,7 +32,7 @@ class Funcionario{
         return $this->nome;
     }
 
-    function setCpf(int $cpf){
+    function setCpf(text $cpf){
         $this->cpf = $cpf;
     }
     function getCpf(){

@@ -11,18 +11,18 @@ class DaoFuncionario{
 
     public function porId(int $id): ?Funcionario {
         $sql = "SELECT nome, cpf,
-                        telefone, endereco,
-                        email FROM funcionarios where id = ?";
+                        telefone, email,
+                        endereco FROM funcionarios where id = ?";
         $stmt = $this->connection->prepare($sql);
         $dep = null;
         if ($stmt) {
           $stmt->bind_param('i',$id);
           if ($stmt->execute()) {
             $nome = ''; $cpf = 0; $telefone = ''; $endereco = ''; $email = '';
-            $stmt->bind_result($nome,$cpf,$telefone,$endereco,$email);
+            $stmt->bind_result($nome,$cpf,$telefone,$email,$endereco);
             $stmt->store_result();
             if ($stmt->num_rows == 1 && $stmt->fetch()) {
-              $dep = new Funcionario($nome,$cpf,$telefone,$endereco,$email,$id);
+              $dep = new Funcionario($nome,$cpf,$telefone,$email,$endereco,$id);
             }
           }
           $stmt->close();
@@ -65,15 +65,15 @@ class DaoFuncionario{
     }
 
     public function atualizar(Funcionario $funcionario): bool {
-        $sql = "UPDATE funcionarios SET nome = ?, cpf = ?, telefone = ?, endereco = ?, email = ? WHERE id = ?";
+        $sql = "UPDATE funcionarios SET nome = ?, cpf = ?, telefone = ?, email = ?, endereco = ?  WHERE id = ?";
         $stmt = $this->connection->prepare($sql);
         $ret = false;      
         if ($stmt) {
             $nome = $funcionario->getNome();
             $cpf = $funcionario->getCpf();
             $telefone = $funcionario->getTelefone();
-            $endereco = $funcionario->getEndereco();
             $email = $funcionario->getEmail();
+            $endereco = $funcionario->getEndereco();       
             $id   = $funcionario->getId();
             $stmt->bind_param('sisssi', $nome,$cpf,$telefone,$endereco,$email,$id);
             $ret = $stmt->execute();
@@ -83,16 +83,16 @@ class DaoFuncionario{
     }
 
     public function todos(): array {
-        $sql = "SELECT id, nome, cpf, telefone, endereco, email from funcionarios";
+        $sql = "SELECT id, nome, cpf, telefone, email, endereco  from funcionarios";
         $stmt = $this->connection->prepare($sql);
         $funcionarios = [];
         if ($stmt) {
           if ($stmt->execute()) {
             $id = 0; $nome = ''; $cpf = 0; $telefone = ''; $endereco = ''; $email = '';
-            $stmt->bind_result($id, $nome, $cpf, $telefone, $endereco, $email);
+            $stmt->bind_result($id, $nome, $cpf, $telefone, $email, $endereco);
             $stmt->store_result();
             while($stmt->fetch()) {
-              $funcionarios[] = new Funcionario($nome, $cpf, $telefone, $endereco, $email, $id);
+              $funcionarios[] = new Funcionario($nome, $cpf, $telefone, $email, $endereco, $id);
             }
           }
           $stmt->close();
