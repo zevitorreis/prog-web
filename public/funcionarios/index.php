@@ -57,6 +57,7 @@ ob_start();
                         <td><?php echo $d->getCpf(); ?></td>
                         <td><?php echo $d->getTelefone(); ?></td>
                         <td><?php echo $d->getEmail(); ?></td>
+                        <td><?php echo $d->getEndereco(); ?></td>
                         <td>
                             <a class="btn btn-danger btn-sm active" 
                                 href="apagar.php?id=<?php echo $d->getId();?>">
