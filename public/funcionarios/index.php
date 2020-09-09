@@ -44,6 +44,7 @@ ob_start();
                         <th scope="col">CPF</th>
                         <th scope="col">Telefone</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Endereço</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
