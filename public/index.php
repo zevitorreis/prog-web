@@ -9,6 +9,8 @@ require_once(__DIR__ . '/../model/Marca.php');
 require_once(__DIR__ . '/../dao/DaoMarca.php');
 require_once(__DIR__ . '/../model/Produto.php');
 require_once(__DIR__ . '/../dao/DaoProduto.php');
+require_once(__DIR__ . '/../model/Funcionario.php');
+require_once(__DIR__ . '/../dao/DaoFuncionario.php');
 
 $conn = Db::getInstance();
 
@@ -19,10 +21,12 @@ if (! $conn->connect()) {
 $daoMarca = new DaoMarca($conn);
 $daoProduto = new DaoProduto($conn);
 $daoDepartamento = new DaoDepartamento($conn);
+$daoFuncionario = new DaoFuncionario($conn);
 
 $marcas = $daoMarca->todos();
 $departamentos = $daoDepartamento->todos();
 $produtos = $daoProduto->todos();
+$funcionarios = $daoFuncionario->todos();
 
 
 ob_start();
@@ -80,6 +84,26 @@ ob_start();
         }
         else
           echo "<h4>Nenhum produto cadastrado</h4>";
+      ?>
+    </div>
+
+    <!-- Funcionario -->
+    <div class="col-md-4" >
+      <h3>Funcionarios</h3>
+      <?php 
+        if (count($funcionarios) >0) {
+          echo "<ul>";
+          foreach($funcionarios as $f) 
+            echo "<li>[" . $f->getId() . "] - " . 
+                      $f->getNome() . " - " .
+                      $f->getCpf() . " - " .
+                      $f->getTelefone() . " - " .
+                      $f->getEmail() . " - " .
+                      $f->getEndereco() . "</li>";
+          echo "</ul>";
+        }
+        else
+          echo "<h4>Nenhum funcionario cadastrado</h4>";
       ?>
     </div>
 
