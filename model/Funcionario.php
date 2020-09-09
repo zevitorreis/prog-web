@@ -2,14 +2,14 @@
 
 class Funcionario{
 
-    $private $id;
-    $private $nome;
-    $private $cpf;
-    $private $telefone;
-    $private $email;
-    $private $endereco;
+    private $id;
+    private $nome;
+    private $cpf;
+    private $telefone;
+    private $email;
+    private $endereco;
     
-    function __construct(int $id=-1, string $nome='', int $cpf=0, string $telefone='', string $email='', string $endereco='' ){
+    function __construct(string $nome='', int $cpf=0, string $telefone='', string $email='', string $endereco='', int $id=-1 ){
         $this->id = $id;
         $this->nome = $nome;
         $this->telefone = $telefone;
