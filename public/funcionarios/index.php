@@ -14,7 +14,7 @@ if (! $conn->connect()) {
 }
 
 $daoFuncionario = new DaoFuncionario($conn);
-$funcionarios = $daoFuncionario->porId( $_POST['id'] );
+$funcionarios = $daoFuncionario->todos();
 
 ob_start();
 
