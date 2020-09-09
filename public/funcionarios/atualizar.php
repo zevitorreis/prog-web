@@ -21,8 +21,8 @@ if ( $funcionario )
   $funcionario->setNome( $_POST['nome'] );
   $funcionario->setCpf( $_POST['cpf'] );
   $funcionario->setTelefone( $_POST['telefone'] );
-  $funcionario->setEndereco( $_POST['endereco'] );
   $funcionario->setEmail( $_POST['email'] );
+  $funcionario->setEndereco( $_POST['endereco'] );
   $daoFuncionario->atualizar( $funcionario );
 }
 
