@@ -97,8 +97,7 @@ ob_start();
             echo "<li>[" . $f->getId() . "] - " . 
                       $f->getNome() . " - " .
                       $f->getTelefone() . " - " .
-                      $f->getEmail() . " - " .
-                      $f-> getEndereco() ."</li>";
+                      $f->getEmail() . "</li>";
           echo "</ul>";
         }
         else
