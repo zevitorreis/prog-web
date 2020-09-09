@@ -20,10 +20,10 @@ ob_start();
                           class="form-control" name="cpf" required>
                       <input type="text" placeholder="Telefone" 
                           class="form-control" name="telefone" required>
-                      <input type="text" placeholder="Endereco" 
-                          class="form-control" name="endereco" required>
                       <input type="text" placeholder="Email" 
                           class="form-control" name="email" required>
+                      <input type="text" placeholder="Endereco" 
+                          class="form-control" name="endereco" required>
                       <div class="input-group-append">
                           <button type="submit" class="btn btn-primary">
                               Salvar
