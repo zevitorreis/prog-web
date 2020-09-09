@@ -31,15 +31,15 @@ class DaoFuncionario{
       }
 
     public function inserir(Funcionario $funcionario): bool {
-    $sql = "INSERT INTO funcionarios (nome,cpf,telefone,endereco,email) VALUES(?,?,?,?,?)";
+    $sql = "INSERT INTO funcionarios (nome,cpf,telefone,email,endereco) VALUES(?,?,?,?,?)";
     $stmt = $this->connection->prepare($sql);
     $res = false;
     if ($stmt) {
         $nome = $funcionario->getNome();
         $cpf = $funcionario->getCpf();
         $telefone = $funcionario->getTelefone();
-        $endereco = $funcionario->getEndereco();
         $email = $funcionario->getEmail();
+        $endereco = $funcionario->getEndereco();
         $stmt->bind_param('sisss', $nome,$cpf,$telefone,$endereco,$email);
         if ($stmt->execute()) {
             $id = $this->connection->getLastID();
