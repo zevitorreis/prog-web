@@ -96,10 +96,8 @@ ob_start();
           foreach($funcionarios as $f) 
             echo "<li>[" . $f->getId() . "] - " . 
                       $f->getNome() . " - " .
-                      $f->getCpf() . " - " .
                       $f->getTelefone() . " - " .
-                      $f->getEmail() . " - " .
-                      $f->getEndereco() . "</li>";
+                      $f->getEmail() . "</li>";
           echo "</ul>";
         }
         else

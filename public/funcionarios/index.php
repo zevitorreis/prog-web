@@ -49,21 +49,21 @@ ob_start();
                 </thead>
                 <tbody>
 <?php 
-        foreach($funcionarios as $d) {
+        foreach($funcionarios as $f) {
 ?>                    
                     <tr>
                         <th scope="row"><?php echo  $d->getId(); ?></th>
-                        <td><?php echo $d->getNome(); ?></td>
-                        <td><?php echo $d->getCpf(); ?></td>
-                        <td><?php echo $d->getTelefone(); ?></td>
-                        <td><?php echo $d->getEmail(); ?></td>
+                        <td><?php echo $f->getNome(); ?></td>
+                        <td><?php echo $f->getCpf(); ?></td>
+                        <td><?php echo $f->getTelefone(); ?></td>
+                        <td><?php echo $f->getEmail(); ?></td>
                         <td>
                             <a class="btn btn-danger btn-sm active" 
-                                href="apagar.php?id=<?php echo $d->getId();?>">
+                                href="apagar.php?id=<?php echo $f->getId();?>">
                                 Apagar
                             </a>
                             <a class="btn btn-secondary btn-sm active" 
-                                href="editar.php?id=<?php echo $d->getId();?>">
+                                href="editar.php?id=<?php echo $f->getId();?>">
                                 Editar
                             </a>                        
                         </td>
