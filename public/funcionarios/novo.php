@@ -16,20 +16,29 @@ ob_start();
                   <div class="input-group">
                       <input type="text" placeholder="Nome do Funcionario" 
                           class="form-control" name="nome" required>
+                  </div>
+                  <div class="input-group">
                       <input type="text" placeholder="CPF" 
                           class="form-control" name="cpf" required>
+                  </div>
+                  <div class="input-group">
                       <input type="text" placeholder="Telefone" 
                           class="form-control" name="telefone" required>
+                  </div>
+                  <div class="input-group">
                       <input type="text" placeholder="Email" 
                           class="form-control" name="email" required>
+                  </div>
+                  <div class="input-group">
                       <input type="text" placeholder="Endereco" 
                           class="form-control" name="endereco" required>
+                  </div>
                       <div class="input-group-append">
                           <button type="submit" class="btn btn-primary">
                               Salvar
                           </button>
                       </div>
-                  </div>
+                  
               </form>
               <a href="index.php" class="btn btn-secondary ml-1" role="button" aria-pressed="true">Cancelar</a>
 
