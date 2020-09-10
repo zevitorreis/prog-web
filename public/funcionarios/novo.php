@@ -38,12 +38,12 @@ ob_start();
                             <label for="endereco">Endereco</label>
                             <input type="text" class="form-control" id="endereco" 
                                 name="endereco" placeholder="Endereco" required>
-                        <div class="input-group-append">
+                    </div>  
+                    <div class="input-group-append">
                           <button type="submit" class="btn btn-primary">
                               Salvar
                           </button>
-                        </div>
-                    </div>  
+                    </div>
               </form>
               <a href="index.php" class="btn btn-secondary ml-1" role="button" aria-pressed="true">Cancelar</a>
             </div>
